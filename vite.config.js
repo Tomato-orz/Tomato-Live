@@ -8,31 +8,31 @@ export default defineConfig({
   server: {
     proxy: {
       // 选项写法
-      // '/bili': {
-      //   target: bili,
-      //   changeOrigin: true,
-      //   // secure:false
-      //   rewrite: (path) => {
-      //     // console.log(path);
-      //     return path.replace(/^\/bili/, '')
-      //   },
-      //   headers:{
-      //     referer: 'https://www.bilibili.com/'
-      //   }
-      // },
-      // 选项写法
-      '/Live': {
-        target: biliLive,
+      '/search': {
+        target: bili,
         changeOrigin: true,
         // secure:false
         rewrite: (path) => {
           // console.log(path);
-          return path.replace(/^\/Live/, '')
+          return path.replace(/^\/search/, '')
         },
-        headers: {
-          referer: 'https://www.bilibili.com/'
-        }
+        // headers:{
+        //   referer: 'https://www.bilibili.com/'
+        // }
       },
+      // // 选项写法
+      // '/Live': {
+      //   target: biliLive,
+      //   changeOrigin: true,
+      //   // secure:false
+      //   rewrite: (path) => {
+      //     // console.log(path);
+      //     return path.replace(/^\/Live/, '')
+      //   },
+      //   headers: {
+      //     referer: 'https://www.bilibili.com/'
+      //   }
+      // },
       // 选项写法
       '/api': {
         target: douyu,
