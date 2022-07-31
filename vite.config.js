@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 const bili = 'https://api.bilibili.com/'
-const biliLive= 'https://api.live.bilibili.com/'
+const biliLive = 'https://api.live.bilibili.com/'
 const douyu = 'https://m.douyu.com/api'
 export default defineConfig({
   plugins: [react()],
@@ -29,7 +29,7 @@ export default defineConfig({
           // console.log(path);
           return path.replace(/^\/Live/, '')
         },
-        headers:{
+        headers: {
           referer: 'https://www.bilibili.com/'
         }
       },
@@ -42,5 +42,8 @@ export default defineConfig({
       },
     }
   },
-  base:'./'
+  base: './',
+  build: {
+    outDir: 'doc'
+  }
 })
