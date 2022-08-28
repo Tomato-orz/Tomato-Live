@@ -21,6 +21,21 @@ export const bili = () => axios({
     search_type: 'live',
   },
   proxy: {
-   
+    // '/bili': {
+    //   target: 'https://api.bilibili.com/',
+    //   changeOrigin: true,
+    //   // secure:false
+    //   rewrite: (path) => {
+    //     // console.log(path);
+    //     return path.replace(/^\/bili/, '')
+    //   },
+    //   headers: {
+    //     referer: 'https://www.bilibili.com/'
+    //   }
+    // }
+    // host:'https://api.bilibili.com',
+    // port:'5173',
+    // changeOrigin: true,
   }
 })
+
